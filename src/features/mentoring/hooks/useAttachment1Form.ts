@@ -3,8 +3,9 @@ import { AxiosError, AxiosResponse, HttpStatusCode } from "axios";
 import { FetchResponse, FormikProps } from "@/shared/types/globals";
 import { handleFormikResponseError, showToast } from "@/shared/utils/funtions";
 import useAxios from "@/shared/hooks/useAxios";
-import { Attachment1Input, IAttachment1Input } from "../mentoringType";
+// import { Attachment1Input, IAttachment1Input } from "../mentoringType";
 import { attachment1Schema } from "../validations/attachment1Validation";
+import {Attachment1Input, IAttachment1Input} from "@/features/attachment/instrument1/type";
 
 const initialValues: Attachment1Input = {
   applicationDate: "",

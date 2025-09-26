@@ -4,7 +4,8 @@ import { FileText } from "lucide-react";
 import { Button, Input } from "@heroui/react";
 import { useCustomFormFields } from "@/shared/hooks/useCustomFormFields";
 import { FormikProps } from "@/shared/types/globals";
-import { IAttachment1Input } from "../../mentoringType";
+import {IAttachment1Input} from "@/features/attachment/instrument1/type";
+
 
 type Attachment1FormProps = {
   formik: FormikProps<IAttachment1Input>;
@@ -33,42 +34,42 @@ const Attachment1Form = ({ formik }: Attachment1FormProps): React.JSX.Element =>
         <p className="text-xl text-muted-foreground text-justify">
           Acuerdos de Mentoría entre el personal mentor y el personal docente acompañado
         </p>
-        <Input
-          {...getFieldProps("applicationDate")}
-          {...getInputProps("applicationDate", "Fecha", touched.applicationDate, errors.applicationDate)}
-        />
-        <Input
-          {...getFieldProps("schoolName")}
-          {...getInputProps("schoolName", "Centro educactivo", touched.schoolName, errors.schoolName)}
-        />
-        <Input
-          {...getFieldProps("departmentMunicipality")}
-          {...getInputProps(
-            "departmentMunicipality",
-            "Departamento/Municipio",
-            touched.departmentMunicipality,
-            errors.departmentMunicipality
-          )}
-        />
+        {/*<Input*/}
+        {/*  {...getFieldProps("applicationDate")}*/}
+        {/*  /!*{...getInputProps("applicationDate", "Fecha", touched.applicationDate, errors.applicationDate)}*!/*/}
+        {/*/>*/}
+        {/*<Input*/}
+        {/*  {...getFieldProps("schoolName")}*/}
+        {/*  /!*{...getInputProps("schoolName", "Centro educactivo", touched.schoolName, errors.schoolName)}*!/*/}
+        {/*/>*/}
+        {/*<Input*/}
+        {/*  {...getFieldProps("departmentMunicipality")}*/}
+        {/*  /!*{...getInputProps(*!/*/}
+        {/*  /!*  "departmentMunicipality",*!/*/}
+        {/*  /!*  "Departamento/Municipio",*!/*/}
+        {/*  /!*  // touched.departmentMunicipality,*!/*/}
+        {/*  /!*  // errors.departmentMunicipality*!/*/}
+        {/*  /!*)}*!/*/}
+        {/*/>*/}
         <p className="text-xl text-muted-foreground text-justify">I. Participantes</p>
-        <Input
-          {...getFieldProps("teacherName")}
-          {...getInputProps(
-            "teacherName",
-            "Nombre del/la docente acompañado/a",
-            touched.teacherName,
-            errors.teacherName
-          )}
-        />
-        <Input
-          {...getFieldProps("mentorName")}
-          {...getInputProps(
-            "mentorName",
-            "Nombre del/la mentor/a",
-            touched.mentorName,
-            errors.mentorName
-          )}
-        />
+        {/*<Input*/}
+        {/*  {...getFieldProps("teacherName")}*/}
+        {/*  /!*{...getInputProps(*!/*/}
+        {/*  /!*  "teacherName",*!/*/}
+        {/*  /!*  "Nombre del/la docente acompañado/a",*!/*/}
+        {/*  /!*  touched.teacherName,*!/*/}
+        {/*  /!*  errors.teacherName*!/*/}
+        {/*  /!*)}*!/*/}
+        {/*/>*/}
+        {/*  <Input*/}
+        {/*    {...getFieldProps("mentorName")}*/}
+        {/*    {...getInputProps(*/}
+        {/*        "mentorName",*/}
+        {/*        "Nombre del/la mentor/a",*/}
+        {/*        touched.mentorName,*/}
+        {/*        errors.mentorName*/}
+        {/*    )}*/}
+        {/*/>*/}
         <p className="text-xl text-muted-foreground text-justify">
           II. Objetivo del acuerdo
           <br />

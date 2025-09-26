@@ -48,5 +48,6 @@ export const tableClassNames: { th: string } = {
 /* eslint-disable no-unused-vars */
 export enum AttendanceEnum {
   PRESENTE = "PRESENTE",
-  AUSENTE = "AUSENTE"
+  AUSENTE = "AUSENTE",
+  PERMISO = "PERMISO"
 }

@@ -6,7 +6,7 @@ import { Select, SelectItem } from "@heroui/react";
 
 import { useCustomFormFields } from "@/shared/hooks/useCustomFormFields";
 import { FormikProps } from "@/shared/types/globals";
-import { IAttachment2Input } from "../../mentoringType";
+import {IAttachment2Input} from "@/features/attachment/instrument2/type";
 
 export const dataList = [
   { name: "experiencie", key: "Menos de un año", label: "Menos de un año" },
@@ -46,23 +46,23 @@ const Attachment2Form = ({ formik }: Attachment2FormProps): React.JSX.Element =>
 
       <form className="space-y-6" onSubmit={handleSubmit}>
         <p className="text-xl text-muted-foreground text-justify">Datos generales del docente</p>
-        <Input
-          {...getFieldProps("fullName")}
-          {...getInputProps("fullName", "Nombre completo: ", touched.fullName, errors.fullName)}
-        />
-        <Input
-          {...getFieldProps("schoolName")}
-          {...getInputProps("schoolName", "Centro educativo: ", touched.schoolName, errors.schoolName)}
-        />
-        <Input
-          {...getFieldProps("departmentMunicipality")}
-          {...getInputProps(
-            "departmentMunicipality",
-            "Departamento/Municipio: ",
-            touched.departmentMunicipality,
-            errors.departmentMunicipality
-          )}
-        />
+        {/*<Input*/}
+        {/*  {...getFieldProps("fullName")}*/}
+        {/*  {...getInputProps("fullName", "Nombre completo: ", touched.fullName, errors.fullName)}*/}
+        {/*/>*/}
+        {/*<Input*/}
+        {/*  {...getFieldProps("schoolName")}*/}
+        {/*  {...getInputProps("schoolName", "Centro educativo: ", touched.schoolName, errors.schoolName)}*/}
+        {/*/>*/}
+        {/*<Input*/}
+        {/*  {...getFieldProps("departmentMunicipality")}*/}
+        {/*  {...getInputProps(*/}
+        {/*    "departmentMunicipality",*/}
+        {/*    "Departamento/Municipio: ",*/}
+        {/*    touched.departmentMunicipality,*/}
+        {/*    errors.departmentMunicipality*/}
+        {/*  )}*/}
+        {/*/>*/}
         <Input
           {...getFieldProps("educationalLevelServed")}
           {...getInputProps(

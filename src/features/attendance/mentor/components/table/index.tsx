@@ -6,7 +6,6 @@ const AttendanceTable = (): React.JSX.Element => {
     <Table
       classNames={tableClassNames}
       aria-label="Tabla para mostrar los grupos registradas"
-      bottomContent={bottomContent}
     ></Table>
   );
 };

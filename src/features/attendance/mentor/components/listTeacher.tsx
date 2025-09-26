@@ -59,7 +59,7 @@ const ListTeacher = ({ attendance }: ListTeacherProps): React.JSX.Element => {
             return (
               <div className="flex flex-wrap gap-2">
                 {items.map((item: any) => {
-                  console.log(item);
+
                   return (
                     <Chip key={item.key} variant="shadow" color="primary">
                       {item.data.fullName}

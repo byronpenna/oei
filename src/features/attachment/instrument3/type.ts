@@ -8,6 +8,7 @@ export interface Attachment3Input {
   priorityLevel: string;
   plannedDate: string;
   activity: string;
+  mentorName: string;
   mode: string;
   responsible: string;
   observations: string;

@@ -11,7 +11,12 @@ const initialValues: Attachment1Input = {
   finishDate: "",
   frequencyOfEncounters: "",
   teacherSignature: "",
-  mentorSignature: ""
+  mentorSignature: "",
+  schoolName: "",
+  teacherName: "",
+  mentorName: "",
+  applicationDate: '',
+  departmentMunicipality: ''
 };
 
 const useAttachment1Form = (): FormikProps<IAttachment1Input> => {

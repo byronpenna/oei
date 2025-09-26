@@ -1,12 +1,14 @@
 import { object, ObjectSchema } from "yup";
-import { Attachment1Input } from "./type";
 import { validationMessages } from "@/shared/constants";
 import { stringField } from "@/shared/utils/funtions";
 
-export const attachment1Schema: ObjectSchema<Attachment1Input> = object({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const attachment1Schema: ObjectSchema<any> = object({
   startDate: stringField(validationMessages.required),
   finishDate: stringField(validationMessages.required),
   frequencyOfEncounters: stringField(validationMessages.required),
   teacherSignature: stringField(validationMessages.required),
-  mentorSignature: stringField(validationMessages.required)
+  mentorSignature: stringField(validationMessages.required),
+
 });
+

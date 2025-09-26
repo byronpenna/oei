@@ -1,7 +1,8 @@
 import { Progress } from "@heroui/react";
 import { Info, Users } from "lucide-react";
-import { IGroupDetail } from "../../group/groupType";
+
 import { GroupListRender } from "./groupInfo";
+import { IGroupDetail } from "@/features/group/groupType";
 
 const GroupDetailInfo = (props: IGroupDetail): React.JSX.Element => (
   <div className="bg-white border border-blue-100 mt-6 shadow-md rounded-lg">

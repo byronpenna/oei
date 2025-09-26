@@ -4,7 +4,8 @@ import { FileText } from "lucide-react";
 import { Button, Input } from "@heroui/react";
 import { useCustomFormFields } from "@/shared/hooks/useCustomFormFields";
 import { FormikProps } from "@/shared/types/globals";
-import { IAttachment3Input } from "../../mentoringType";
+import {IAttachment3Input} from "@/features/attachment/instrument3/type";
+
 
 type Attachment3FormProps = {
   formik: FormikProps<IAttachment3Input>;
@@ -37,38 +38,38 @@ const Attachment3Form = ({ formik }: Attachment3FormProps): React.JSX.Element =>
         </p>
         <br />
         <p className="text-xl text-muted-foreground text-justify">I. DATOS GENERALES</p>
-        <Input
-          {...getFieldProps("teacherName")}
-          {...getInputProps(
-            "teacherName",
-            "Nombre del personal docente acompañado:",
-            touched.teacherName,
-            errors.teacherName
-          )}
-        />
-        <Input
-          {...getFieldProps("mentorName")}
-          {...getInputProps(
-            "mentorName",
-            "Nombre del personal mentor:",
-            touched.mentorName,
-            errors.mentorName
-          )}
-        />
-        <Input
-          {...getFieldProps("schoolName")}
-          {...getInputProps("schoolName", "Centro Educativo", touched.schoolName, errors.schoolName)}
-        />
+        {/*<Input*/}
+        {/*  {...getFieldProps("teacherName")}*/}
+        {/*  {...getInputProps(*/}
+        {/*    "teacherName",*/}
+        {/*    "Nombre del personal docente acompañado:",*/}
+        {/*    touched.teacherName,*/}
+        {/*    errors.teacherName*/}
+        {/*  )}*/}
+        {/*/>*/}
+        {/*<Input*/}
+        {/*  {...getFieldProps("mentorName")}*/}
+        {/*  {...getInputProps(*/}
+        {/*    "mentorName",*/}
+        {/*    "Nombre del personal mentor:",*/}
+        {/*    touched.mentorName,*/}
+        {/*    errors.mentorName*/}
+        {/*  )}*/}
+        {/*/>*/}
+        {/*<Input*/}
+        {/*  {...getFieldProps("schoolName")}*/}
+        {/*  {...getInputProps("schoolName", "Centro Educativo", touched.schoolName, errors.schoolName)}*/}
+        {/*/>*/}
 
-        <Input
-          {...getFieldProps("departmentMunicipality")}
-          {...getInputProps(
-            "departmentMunicipality",
-            "Departamento/Municipio",
-            touched.departmentMunicipality,
-            errors.departmentMunicipality
-          )}
-        />
+        {/*<Input*/}
+        {/*  {...getFieldProps("departmentMunicipality")}*/}
+        {/*  {...getInputProps(*/}
+        {/*    "departmentMunicipality",*/}
+        {/*    "Departamento/Municipio",*/}
+        {/*    touched.departmentMunicipality,*/}
+        {/*    errors.departmentMunicipality*/}
+        {/*  )}*/}
+        {/*/>*/}
         <Input
           {...getFieldProps("startDate")}
           {...getInputProps(

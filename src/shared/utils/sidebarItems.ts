@@ -9,9 +9,10 @@ import {
   CalendarCheck,
   Calendar
 } from "lucide-react";
-import { SidebarItemType } from "../ui/sidebar/type";
+// import { SidebarItemType } from "../ui/sidebar/type";
 
-export const sidebarItems: SidebarItemType[] = [
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export const sidebarItems: any[] = [
   {
     title: "Dashboard",
     path: "/admin/dashboard",

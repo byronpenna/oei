@@ -2,13 +2,14 @@ import { validationMessages } from "@/shared/constants";
 import { stringField } from "@/shared/utils/funtions";
 import { regex } from "@/shared/types/regex-validation";
 import { object, ObjectSchema, ref } from "yup";
-import { ICodeVerify, IPasswordChange } from "./adminType";
 
-export const verifyCodeSchema: ObjectSchema<ICodeVerify> = object({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const verifyCodeSchema: ObjectSchema<any> = object({
   verifyCode: stringField("Código OPT inválido")
 });
 
-export const changePasswordSchema: ObjectSchema<IPasswordChange> = object({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const changePasswordSchema: ObjectSchema<any> = object({
   currentPassword: stringField(validationMessages.required),
   newPassword: stringField(validationMessages.required)
     .min(8, "La contraseña debe tener al menos 8 caracteres")

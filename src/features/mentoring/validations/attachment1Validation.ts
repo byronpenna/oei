@@ -1,7 +1,8 @@
 import { object, ObjectSchema } from "yup";
 import { validationMessages } from "@/shared/constants";
 import { stringField } from "@/shared/utils/funtions";
-import { Attachment1Input } from "../mentoringType";
+import {Attachment1Input} from "@/features/attachment/instrument1/type";
+
 
 export const attachment1Schema: ObjectSchema<Attachment1Input> = object({
   applicationDate: stringField(validationMessages.required),

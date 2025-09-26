@@ -3,10 +3,11 @@ import { AxiosError, AxiosResponse, HttpStatusCode } from "axios";
 import { FetchResponse, FormikProps } from "@/shared/types/globals";
 import { handleFormikResponseError, showToast } from "@/shared/utils/funtions";
 import useAxios from "@/shared/hooks/useAxios";
-import { Attachment3Input, IAttachment3Input } from "../mentoringType";
+// import { Attachment3Input, IAttachment3Input } from "../mentoringType";
 import { attachment3Schema } from "../validations/attachment3Validation";
 
-const initialValues: Attachment3Input = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const initialValues: any = {
   teacherName: "",
   mentorName: "",
   schoolName: "",
@@ -39,12 +40,13 @@ const initialValues: Attachment3Input = {
   proposals: ""
 };
 
-const useAttachment3Form = (): FormikProps<IAttachment3Input> => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const useAttachment3Form = (): FormikProps<any> => {
   const useRequest = useAxios(true);
 
   const handleSubmit = async (
-    values: Attachment3Input,
-    formikHelpers: FormikHelpers<IAttachment3Input>
+    values: any,
+    formikHelpers: FormikHelpers<any>
   ): Promise<void> => {
     const teacherNameField = values.teacherName;
     const mentorNameField = values.mentorName;
@@ -302,7 +304,7 @@ const useAttachment3Form = (): FormikProps<IAttachment3Input> => {
 
     data.map(async (item) => {
       try {
-        const res: AxiosResponse<FetchResponse<IAttachment3Input>> = await useRequest.post(
+        const res: AxiosResponse<FetchResponse<any>> = await useRequest.post(
           "/appendix-test/create",
           item
         );
@@ -321,7 +323,8 @@ const useAttachment3Form = (): FormikProps<IAttachment3Input> => {
           // setDataAttendance(newData);
         }
       } catch (error) {
-        handleFormikResponseError<IAttachment3Input>(error as AxiosError, formikHelpers!);
+        /* eslint-disable @typescript-eslint/no-explicit-any */
+        handleFormikResponseError<any>(error as AxiosError, formikHelpers!);
       }
     });
   };
